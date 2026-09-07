@@ -1,0 +1,385 @@
+<!--
+  ============================================================================
+  ŠPICA.hr — Humoristična svadbena parodija
+  ============================================================================
+
+  >>> OVDJE MIJENJAJ OSOBNE PODATKE <<<
+
+  Sve što trebaš prilagoditi nalazi se između oznaka [[ ... ]] u tekstu.
+  Napravi "Find & Replace" u svom uređivaču teksta:
+
+    [[IME_MLADOZENJE]]  ->  ime mladoženje (npr. "Marko Marković")
+    [[IME_MLADENKE]]    ->  ime mladenke   (npr. "Ana Anić")
+    [[DATUM_VJENCANJA]] ->  datum vjenčanja (npr. "13. rujna 2026.")
+
+  GLAVNA FOTOGRAFIJA:
+    Stavi svoju fotografiju u mapu "images" pod nazivom "mladenci.jpg".
+    Ako datoteka ne postoji, automatski se prikazuje stilizirani CSS
+    placeholder (ništa se neće "slomiti").
+    Traži komentar <!-- >>> GLAVNA FOTOGRAFIJA <<< -> niže u kodu.
+
+  OSOBNE ŠALE I DETALJI:
+    Slobodno mijenjaj tekst članka, komentare i naslove povezanih vijesti
+    kako bi ubacio interne fore specifične za vašu ekipu.
+
+  NAPOMENA: Ovo je parodija. Sve tvrdnje, izjave i reklame su izmišljene.
+  ============================================================================
+-->
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ŠPICA.hr — Bog Jave izgovorio sudbonosno "DA"! | SHOWBUZZ</title>
+  <meta name="description" content="Humoristična svadbena parodija. Sve tvrdnje, komentari i reklame potpuno su izmišljeni.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💍</text></svg>">
+</head>
+<body>
+
+  <!-- ===================== BREAKING NEWS TICKER ===================== -->
+  <div class="ticker" role="region" aria-label="Najnovije vijesti">
+    <div class="ticker__label">UPRAVO</div>
+    <div class="ticker__viewport">
+      <div class="ticker__track" id="tickerTrack">
+        <span class="ticker__item">UPRAVO: Bog Jave službeno uklonjen s tržišta — stručnjaci tvrde da rollback nije moguć</span>
+        <span class="ticker__item">EKSKLUZIVNO: Kumovi potpisali pull request bez ijednog komentara</span>
+        <span class="ticker__item">Bračni SLA dosegao rekordnih 99,99% — uzvanici odobrili merge</span>
+        <span class="ticker__item">Izvori tvrde: kompatibilnost potvrđena u produkcijskom okruženju</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== HEADER / LOGO ===================== -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <button class="hamburger" id="hamburger" aria-label="Otvori izbornik" aria-expanded="false" aria-controls="mainNav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <a href="#top" id="top" class="logo" aria-label="ŠPICA.hr naslovnica">
+        <span class="logo__mark">ŠPICA</span><span class="logo__dot">.hr</span>
+        <span class="logo__parody" title="Ovo je parodija">PARODIJA</span>
+      </a>
+
+      <div class="site-header__slogan">Prvi sa svakom (izmišljenom) ekskluzivom</div>
+    </div>
+
+    <!-- Napomena o parodiji odmah ispod logotipa -->
+    <div class="parody-note">
+      Humoristična svadbena parodija — sve tvrdnje, komentari i reklame potpuno su izmišljeni.
+    </div>
+  </header>
+
+  <!-- ===================== NAVIGACIJA ===================== -->
+  <nav class="mainnav" id="mainNav" aria-label="Glavna navigacija">
+    <div class="container mainnav__inner">
+      <a href="#" class="mainnav__link is-active">Naslovnica</a>
+      <a href="#" class="mainnav__link">SHOWBUZZ</a>
+      <a href="#" class="mainnav__link">Ljubav godine</a>
+      <a href="#" class="mainnav__link">Crveni tepih</a>
+      <a href="#" class="mainnav__link">Trač</a>
+      <a href="#" class="mainnav__link">Lifestyle</a>
+      <a href="#" class="mainnav__link mainnav__link--hot">💍 Svadba</a>
+    </div>
+  </nav>
+
+  <!-- ===================== GLAVNI LAYOUT ===================== -->
+  <div class="container layout">
+
+    <!-- ========== GLAVNI STUPAC ========== -->
+    <main class="content">
+
+      <article class="article">
+        <!-- Kategorija / oznake -->
+        <div class="badges">
+          <span class="badge badge--red">EKSKLUZIVNO</span>
+          <span class="badge badge--dark">SHOWBUZZ</span>
+          <span class="badge badge--pink">LJUBAV GODINE</span>
+          <span class="badge badge--live"><span class="live-dot"></span>UPRAVO</span>
+        </div>
+
+        <!-- GLAVNI NASLOV -->
+        <h1 class="article__title">
+          BOG JAVE IZGOVORIO JE SUDBONOSNO &bdquo;DA&ldquo;! Kolege u šoku:
+          &bdquo;Nismo znali da podržava ovako ozbiljan commitment&ldquo;
+        </h1>
+
+        <!-- PODNASLOV -->
+        <p class="article__subtitle">
+          <strong>Tomislav</strong> pronašao je osobu s kojom želi dijeliti
+          život, sreću, račune, godišnji odmor i sve buduće produkcijske incidente.
+        </p>
+
+        <!-- META PODACI -->
+        <div class="article__meta">
+          <span class="article__author">Autor: <strong>Redakcija ŠPICE</strong></span>
+          <span class="dot-sep">•</span>
+          <span>Objavljeno: <strong>06.09.2026.</strong></span>
+          <span class="dot-sep">•</span>
+          <span>⏱ 3 minute čitanja</span>
+          <span class="dot-sep">•</span>
+          <span class="views">👁 <strong id="viewCount">12.487</strong> pregleda</span>
+        </div>
+
+        <!-- SHARE GUMBI -->
+        <div class="share-bar" aria-label="Podijeli članak">
+          <button class="share-btn share-btn--fb" data-share>f Podijeli</button>
+          <button class="share-btn share-btn--x" data-share>✕ Objavi</button>
+          <button class="share-btn share-btn--wa" data-share>✆ Pošalji</button>
+          <button class="share-btn share-btn--copy" data-share>🔗 Kopiraj link</button>
+        </div>
+
+        <!-- >>> GLAVNA FOTOGRAFIJA <<<
+             Stavi datoteku images/mladenci.jpg da se prikaže prava fotografija.
+             Ako slike nema, prikazuje se CSS placeholder ispod (onerror). -->
+        <figure class="hero-figure">
+          <img src="images/mladenci.jpg" alt="Mladenci na svadbenoj ceremoniji"
+               class="hero-figure__img"
+               onerror="this.classList.add('is-missing'); this.removeAttribute('src');">
+          <div class="hero-figure__placeholder" aria-hidden="true">
+            <div class="hero-figure__hearts">💍❤️</div>
+            <div class="hero-figure__ph-text">MJESTO ZA FOTOGRAFIJU MLADENACA</div>
+            <div class="hero-figure__ph-sub">images/mladenci.jpg</div>
+          </div>
+          <figcaption class="hero-figure__caption">
+            Foto: LinkedIn
+          </figcaption>
+        </figure>
+
+        <!-- TEKST ČLANKA -->
+        <div class="article__body">
+          <p class="lead">
+            Dogodilo se ono što nitko od kolega nije očekivao ovako brzo:
+            <strong>Tomislav Karnas</strong>, u redakciji i među razvojnim timovima
+            poznat kao <em>&bdquo;Bog Jave&ldquo;</em>, a na StackOverflowu
+            legendaran pod imenom <strong>ufctomo</strong>, čije odgovore prepisuju cijele
+            generacije junior developera — izgovorio je sudbonosno &bdquo;da&ldquo;. Vijest
+            je u sekundi obišla sve Slack kanale, a nekolicina seniora navodno je morala
+            sjesti.
+          </p>
+
+          <p>
+            Dugogodišnji korisnik Java ekosustava, čovjek koji je bez treptaja
+            preživio migracije, deadlineove i beskonačne stand-upove, sada je uspješno
+            <strong>deployao najvažniju životnu odluku</strong>. Prema riječima očevidaca,
+            ceremonija je prošla besprijekorno — <em>bez ijednog kritičnog buga, timeouta
+            i rollbacka</em>.
+          </p>
+
+          <blockquote class="pullquote">
+            &bdquo;Od danas više nije single-threaded. Njegov život službeno prelazi
+            na stabilnu paralelnu obradu.&ldquo;
+          </blockquote>
+
+          <p>
+            Mladenka <strong>Nikol</strong>, opisana od svih prisutnih kao
+            apsolutno sjajna, tim je činom dobila <strong>trajni administratorski pristup
+            njegovu srcu</strong> — pristup koji, kako doznajemo, nema datum isteka niti
+            zahtijeva dvofaktorsku autentikaciju.
+          </p>
+
+          <p>
+            Izvori bliski paru za našu redakciju tvrde da je <em>kompatibilnost potvrđena
+            u produkcijskom okruženju</em>, i to nakon iscrpnog razdoblja testiranja u
+            stvarnim uvjetima. &bdquo;Nema tu više staginga, ovo je live&ldquo;, rekao
+            nam je jedan uzvanik dok je punio treći tanjur.
+          </p>
+
+          <p>
+            Detalje oko odobrenja doznajemo iz prve ruke: <strong>kumovi su navodno
+            potpisali pull request</strong>, a <strong>uzvanici jednoglasno odobrili
+            merge</strong>. Bračni ugovor, kažu upućeni, dolazi sa
+            <strong>SLA-om od najmanje 99,99%</strong> te uz neograničeno produženje bez
+            skrivenih troškova.
+          </p>
+
+          <blockquote class="pullquote pullquote--alt">
+            &bdquo;Mladenka je jedina osoba kojoj je bez razmišljanja dao sva
+            administratorska prava.&ldquo;
+          </blockquote>
+
+          <p>
+            Posebnu pozornost ukrao je najmlađi član tima — <strong>sin Sven</strong>,
+            koji je na vjenčanju obavljao ulogu neslužbenog <em>release managera</em> i
+            pomnog nadzornika svakog koraka ceremonije. Prema riječima uzvanika, upravo je
+            Sven prvi dao <em>approval</em> ovom spoju, i to davno prije kumova — čime je
+            službeno postao najvažniji dio produkcije koju su Tomislav i Nikol zajedno
+            pokrenuli.
+          </p>
+
+          <p>
+            Cijela redakcija ŠPICE mladencima od srca želi <strong>puno ljubavi, smijeha,
+            zajedničkih pustolovina i što manje neočekivanih životnih bugova</strong>.
+            Želimo im da nikada ne moraju napraviti <em>rollback ljubavi</em> te da im svaki
+            zajednički release bude bolji od prethodnoga.
+          </p>
+
+          <!-- TOPLA PORUKA -->
+          <div class="wish-box">
+            <p>
+              Dragi <strong>Tomislav</strong> i <strong>Nikol</strong> (i mali
+              <strong>Sven</strong>!), želimo vam da vaš zajednički život bude najljepši
+              projekt koji ste ikada pokrenuli — pun ljubavi, smijeha, strpljenja i verzija
+              koje postaju sve bolje. <strong>Sretno vam vjenčanje!</strong>
+            </p>
+          </div>
+
+          <div class="tags-row">
+            <span class="tag">#BogJave</span>
+            <span class="tag">#ProdukcijaSrca</span>
+            <span class="tag">#BezRollbacka</span>
+            <span class="tag">#SLA9999</span>
+            <span class="tag">#MergeApproved</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- ========== INLINE REKLAMA (GLJIVICE) ========== -->
+      <aside class="ad ad--banner ad--fungi" data-ad aria-label="Oglas">
+        <span class="ad__flag">OGLAS</span>
+        <div class="ad__inner">
+          <div class="ad__emoji">🦶🍄⚠️</div>
+          <div class="ad__text">
+            <h3>GLJIVICE GA MRZE!</h3>
+            <p>Programer iz Sesveta otkrio jednu jednostavnu metodu koju liječnici skrivaju.</p>
+            <button class="ad__cta" data-ad-cta>SAZNAJ TAJNU</button>
+          </div>
+        </div>
+        <span class="ad__disclaimer">Rezultati nisu stvarni jer nije stvaran ni proizvod.</span>
+      </aside>
+
+      <!-- ========== POVEZANI ČLANCI ========== -->
+      <section class="related" aria-label="Povezane vijesti">
+        <h2 class="section-title">Moglo bi vas šokirati</h2>
+        <div class="related__grid" id="relatedGrid">
+          <!-- Kartice se generiraju iz script.js (data-modal), a evo i statičnih fallbackova: -->
+        </div>
+      </section>
+
+      <!-- ========== KOMENTARI ========== -->
+      <section class="comments" aria-label="Komentari">
+        <h2 class="section-title">Komentari <span class="comments__count">(17)</span></h2>
+
+        <div class="comment-box">
+          <textarea class="comment-box__input" placeholder="Napiši komentar (samo za ukras, ništa se ne šalje)…" aria-label="Napiši komentar"></textarea>
+          <button class="comment-box__submit" data-fake-submit>Objavi komentar</button>
+        </div>
+
+        <ul class="comment-list" id="commentList">
+          <!-- Komentari se ubacuju iz script.js -->
+        </ul>
+      </section>
+
+    </main>
+
+    <!-- ========== SIDEBAR ========== -->
+    <aside class="sidebar" aria-label="Bočni stupac">
+
+      <!-- Najčitanije -->
+      <div class="widget widget--most-read">
+        <h3 class="widget__title">🔥 Najčitanije</h3>
+        <ol class="most-read" id="mostRead">
+          <!-- popunjava script.js -->
+        </ol>
+      </div>
+
+      <!-- Reklama gljivice (sidebar) -->
+      <aside class="ad ad--box ad--fungi-2" data-ad aria-label="Oglas">
+        <span class="ad__flag">OGLAS</span>
+        <div class="ad__box-emoji">🍄🚫</div>
+        <h4>Imate gljivice?</h4>
+        <p>Nemojte deployati prije nego što pročitate ovo!</p>
+        <button class="ad__cta ad__cta--green" data-ad-cta>POGLEDAJ PRIJE NEGO UKLONE</button>
+        <span class="ad__disclaimer">Rezultati nisu stvarni jer nije stvaran ni proizvod.</span>
+      </aside>
+
+      <!-- Anketa -->
+      <div class="widget widget--poll">
+        <h3 class="widget__title">📊 Anketa dana</h3>
+        <p class="poll__q">Je li brak trebao ići u Spring ili nešto stabilnije?</p>
+        <div class="poll" id="poll">
+          <button class="poll__opt" data-poll="Spring">Spring Boot, naravno</button>
+          <button class="poll__opt" data-poll="Vanilla">Vanilla Java, bez ovisnosti</button>
+          <button class="poll__opt" data-poll="Ljubav">Samo ljubav, bez frameworka</button>
+        </div>
+      </div>
+
+      <!-- Reklama gljivice (sidebar 2) -->
+      <aside class="ad ad--box ad--fungi-3" data-ad aria-label="Oglas">
+        <span class="ad__flag">OGLAS</span>
+        <div class="ad__box-emoji">💅🍄</div>
+        <h4>Dermatolozi bijesni!</h4>
+        <p>Ova jedna linija Java koda uklanja 99% gljivica.</p>
+        <button class="ad__cta ad__cta--yellow" data-ad-cta>SAZNAJ TAJNU</button>
+        <span class="ad__disclaimer">Rezultati nisu stvarni jer nije stvaran ni proizvod.</span>
+      </aside>
+
+      <!-- Male povezane kartice -->
+      <div class="widget widget--mini">
+        <h3 class="widget__title">📰 Iz iste priče</h3>
+        <div class="mini-cards" id="miniCards">
+          <!-- popunjava script.js -->
+        </div>
+      </div>
+
+    </aside>
+  </div>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__logo">ŠPICA<span>.hr</span> <span class="logo__parody">PARODIJA</span></div>
+      <p class="site-footer__disclaimer">
+        <strong>Humoristična svadbena parodija — sve tvrdnje, komentari i reklame potpuno su izmišljeni.</strong>
+      </p>
+      <p class="site-footer__small">
+        Ovaj portal ne postoji, proizvodi ne postoje, a jedina stvarna stvar ovdje je čestitka mladencima.
+        Nijedna osoba, framework ni gljivica nisu stradali tijekom izrade ove stranice.
+      </p>
+      <p class="site-footer__copy">© <span id="year"></span> ŠPICA.hr — izmišljeno s ljubavlju 💍</p>
+    </div>
+  </footer>
+
+  <!-- ===================== MODAL (dummy članci) ===================== -->
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal__backdrop" data-modal-close></div>
+    <div class="modal__dialog" role="document">
+      <button class="modal__close" data-modal-close aria-label="Zatvori">&times;</button>
+      <div class="modal__flag">EKSKLUZIVNO</div>
+      <h2 class="modal__title" id="modalTitle">Naslov</h2>
+      <div class="modal__emoji">🍽️</div>
+      <p class="modal__msg">
+        Ova ekskluziva još nije potvrđena jer je naš novinar trenutno na švedskom stolu.
+      </p>
+      <button class="modal__ok" data-modal-close>U redu, pričekat ću</button>
+    </div>
+  </div>
+
+  <!-- ===================== POPUP REKLAMA (gljivice) ===================== -->
+  <div class="popup" id="popupAd" role="dialog" aria-modal="true" aria-labelledby="popupTitle" hidden>
+    <div class="popup__backdrop" data-popup-close></div>
+    <div class="popup__dialog">
+      <button class="popup__x" data-popup-close aria-label="Zatvori oglas">&times;</button>
+      <span class="ad__flag ad__flag--big">OGLAS</span>
+      <div class="popup__emoji">🦶🍄🔥</div>
+      <h2 class="popup__title" id="popupTitle">Liječnici ostali bez riječi!</h2>
+      <p class="popup__text">
+        Njegovi nokti nakon samo <strong>jednog sprinta</strong>… nećete vjerovati što se dogodilo.
+        Šokantno otkriće: gljivice ne preživljavaju code review!
+      </p>
+      <button class="popup__cta" data-ad-cta>POGLEDAJ PRIJE NEGO UKLONE</button>
+      <button class="popup__decline" data-popup-close>Ne, želim zadržati svoje gljivice</button>
+      <span class="ad__disclaimer ad__disclaimer--center">Rezultati nisu stvarni jer nije stvaran ni proizvod.</span>
+    </div>
+  </div>
+
+  <!-- ===================== TOAST (obavijesti) ===================== -->
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <!-- ===================== POVRATAK NA VRH ===================== -->
+  <button class="to-top" id="toTop" aria-label="Povratak na vrh" hidden>↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
