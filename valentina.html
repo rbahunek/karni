@@ -1,0 +1,425 @@
+<!--
+  ============================================================================
+  ŠPICA.hr — Humoristična parodija (interni portal Kodelaba)
+  valentina.html — Transfer godine: oproštaj kolegici Valentini Viskov
+  ============================================================================
+  NAPOMENA: Ovo je parodija. Sve izjave, komentari i reklame su izmišljeni.
+  Fotografija (ako se doda): images/valentina.jpg — inače se prikazuje
+  stilizirani CSS placeholder.
+  ============================================================================
+-->
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ŠPICA.hr — Transfer godine: Valentina Viskov napušta Kodelab | SPORT</title>
+  <meta name="description" content="Humoristična parodija. Transfer godine potresao paddock: Valentina Viskov napušta Kodelab. Sve izjave i reklame potpuno su izmišljene.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏁</text></svg>">
+</head>
+<body>
+
+  <!-- ===================== BREAKING NEWS TICKER ===================== -->
+  <div class="ticker" role="region" aria-label="Najnovije vijesti">
+    <div class="ticker__label">UPRAVO</div>
+    <div class="ticker__viewport">
+      <div class="ticker__track" id="tickerTrack">
+        <span class="ticker__item">UPRAVO: Valentina Viskov napušta Kodelab — timski radio preopterećen porukama podrške</span>
+        <span class="ticker__item">EKSKLUZIVNO: Suparničke momčadi privremeno zaboravile rivalstvo i složno odale priznanje</span>
+        <span class="ticker__item">Inženjeri potvrdili: zamjena za bolid pronađena, zamjena za moral momčadi — i dalje se traži</span>
+        <span class="ticker__item">Ugljični otisak paddocka od danas se službeno ponaša pristojnije</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== HEADER / LOGO ===================== -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <button class="hamburger" id="hamburger" aria-label="Otvori izbornik" aria-expanded="false" aria-controls="mainNav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <a href="#top" id="top" class="logo" aria-label="ŠPICA.hr naslovnica">
+        <span class="logo__mark">ŠPICA</span><span class="logo__dot">.hr</span>
+        <span class="logo__parody" title="Ovo je parodija">PARODIJA</span>
+      </a>
+
+      <div class="site-header__slogan">Prvi sa svakom (izmišljenom) ekskluzivom iz paddocka</div>
+    </div>
+
+    <div class="parody-note">
+      Humoristična parodija — sve izjave, komentari i reklame potpuno su izmišljeni.
+    </div>
+  </header>
+
+  <!-- ===================== NAVIGACIJA ===================== -->
+  <nav class="mainnav" id="mainNav" aria-label="Glavna navigacija">
+    <div class="container mainnav__inner">
+      <a href="index.html" class="mainnav__link">Naslovnica</a>
+      <a href="#" class="mainnav__link is-active">SPORT</a>
+      <a href="#" class="mainnav__link">Paddock</a>
+      <a href="#" class="mainnav__link">Transferi</a>
+      <a href="#" class="mainnav__link">Trač</a>
+      <a href="#" class="mainnav__link">Lifestyle</a>
+      <a href="#" class="mainnav__link mainnav__link--hot">🏁 Transfer godine</a>
+    </div>
+  </nav>
+
+  <!-- ===================== GLAVNI LAYOUT ===================== -->
+  <div class="container layout">
+
+    <!-- ========== GLAVNI STUPAC ========== -->
+    <main class="content">
+
+      <article class="article">
+        <!-- Kategorija / oznake -->
+        <div class="badges">
+          <span class="badge badge--red">SPORT</span>
+          <span class="badge badge--dark">TRANSFER GODINE</span>
+          <span class="badge badge--pink">PADDOCK</span>
+          <span class="badge badge--live"><span class="live-dot"></span>UPRAVO</span>
+        </div>
+
+        <!-- GLAVNI NASLOV -->
+        <h1 class="article__title">
+          TRANSFER GODINE POTRESAO PADDOCK: Valentina Viskov napušta Kodelab,
+          cijela garaža ustala s boksa
+        </h1>
+
+        <!-- PODNASLOV -->
+        <p class="article__subtitle">
+          <strong>Osvajačica IVS lige</strong> odvozila je svoju najbolju rundu daleko
+          od reflektora — u glavama i srcima kolega koje je naučila da vjeruju u sebe.
+        </p>
+
+        <!-- META PODACI -->
+        <div class="article__meta">
+          <span class="article__author">Autor: <strong>Redakcija ŠPICE — rubrika SPORT</strong></span>
+          <span class="dot-sep">•</span>
+          <span>Objavljeno: <strong>09.10.2026.</strong></span>
+          <span class="dot-sep">•</span>
+          <span>⏱ 3 minute čitanja</span>
+          <span class="dot-sep">•</span>
+          <span class="views">👁 <strong id="viewCount">18.342</strong> pregleda</span>
+        </div>
+
+        <!-- SHARE GUMBI -->
+        <div class="share-bar" aria-label="Podijeli članak">
+          <button class="share-btn share-btn--fb" data-share>f Podijeli</button>
+          <button class="share-btn share-btn--x" data-share>✕ Objavi</button>
+          <button class="share-btn share-btn--wa" data-share>✆ Pošalji</button>
+          <button class="share-btn share-btn--copy" data-share>🔗 Kopiraj link</button>
+        </div>
+
+        <!-- >>> GLAVNA FOTOGRAFIJA <<<
+             Dodaj images/valentina.jpg za pravu fotografiju; inače placeholder. -->
+        <figure class="hero-figure">
+          <img src="images/valentina.png" alt="Valentina Viskov na postolju u trkaćem odijelu Kodelaba, slavi pobjedu u IVS ligi"
+               class="hero-figure__img"
+               onerror="this.classList.add('is-missing'); this.removeAttribute('src');">
+          <div class="hero-figure__placeholder" aria-hidden="true">
+            <div class="hero-figure__hearts">🏁✨</div>
+            <div class="hero-figure__ph-text">MJESTO ZA FOTOGRAFIJU IZ PADDOCKA</div>
+            <div class="hero-figure__ph-sub">najbrži krug karijere</div>
+          </div>
+          <figcaption class="hero-figure__caption">
+            Foto: timski arhiv Kodelaba — slavlje na postolju IVS lige
+          </figcaption>
+        </figure>
+
+        <!-- TEKST ČLANKA -->
+        <div class="article__body">
+          <p class="lead">
+            Vijest je u Kodelab stigla kratko i bez najave, točno kao safety car:
+            <strong>Valentina Viskov</strong>, jedna od onih vozačica koje ne moraš
+            gledati na semaforu da bi znao da su najbrže, napušta momčad. U roku od
+            nekoliko minuta timski radio bio je zaguušen porukama, a u garaži je, kažu
+            očevici, netko morao sjesti na gume.
+          </p>
+
+          <p>
+            U vitrini Kodelaba već stoji njezin najvažniji trofej —
+            <strong>naslov osvajačice IVS lige</strong> — pehar koji se u ovoj momčadi
+            ne vadi iz ormara svaki dan. No oni koji su s njom dijelili boks reći će vam
+            da se Valentina nikada nije vozila zbog postolja. Vozila se zbog ekipe.
+          </p>
+
+          <p>
+            Godinama je bila ona vozačica koja na timskom radiju nikada nije vikala. Kad
+            bi mlađi član momčadi ušao u zavoj preoštro, prepao se vlastitog deadlinea ili
+            pomislio da mu bolid jednostavno nije dovoljno brz, iz njezina bi se boksa
+            začuo isti mirni glas: <em>možeš ti to, samo diši i drži liniju.</em> I —
+            čudno — ljudi bi to onda i uspjeli. Nebrojeno puta ispratila je kolegu na
+            stazu uvjerenog da će se zabiti, a dočekala ga u parc ferméu s najboljim
+            krugom karijere.
+          </p>
+
+          <blockquote class="pullquote">
+            &bdquo;Zamjenu za njezino mjesto u bolidu možemo naći. Za njezin učinak na
+            moral momčadi — inženjeri još uvijek rade na tome.&ldquo;
+          </blockquote>
+
+          <p>
+            Jer u Kodelabu priznaju: oglas za zamjenu je kratak, zahtjevi jasni, a
+            testiranja već traju danima. Problem je drugdje. Bolid se da postaviti,
+            motor da pojačati, ali <strong>onaj njezin učinak na moral garaže nikako se ne
+            uspijeva reproducirati</strong>. Taj dio, čini se, nikada nije ni bio upisan u
+            specifikaciju.
+          </p>
+
+          <p>
+            A ono po čemu će ovaj transfer ostati zapamćen jest reakcija ostatka grida.
+            Suparničke momčadi, koje inače jedna drugoj ne bi posudile ni set kišnih guma,
+            ovaj su put <strong>na trenutak zaboravile rivalstvo</strong> i složno joj
+            odale priznanje. Iz više boksova čulo se isto: &bdquo;Protiv nje smo se
+            natjecali, ali njoj se jednostavno nije dalo ne navijati.&ldquo;
+          </p>
+
+          <p>
+            Valentina je, naime, bila i glasna zagovornica <strong>prava životinja,
+            održivog razvoja i ekologije</strong> — i to ne samo pred kamerama. Pod njezinim
+            je utjecajem i sâm <strong>ugljični otisak paddocka počeo se ponašati
+            pristojnije</strong>, kante za otpad napokon su naučile razliku između plastike
+            i papira, a priča se da je barem jedan inženjer zbog nje prvi put u životu
+            ugasio svjetlo na izlasku iz garaže. Gdje god bi se pojavila, stvari su nekako
+            postajale čišće, tiše i ljudskije.
+          </p>
+
+          <blockquote class="pullquote pullquote--alt">
+            &bdquo;Nije se vidjela na telemetriji, ali se osjećala u svakom boksu kroz koji
+            bi prošla.&ldquo;
+          </blockquote>
+
+          <p>
+            Jer to je bila ta njezina čarolija. Poslije nje bi čaj bio topliji — jer Vale
+            je, za razliku od ostatka garaže, bila jedina koja nikad nije pila kavu, nego
+            čaj — nervoza bi bila manja, a onaj tko je mislio da taj dan ne može dalje
+            nekako bi ipak izašao na stazu. &bdquo;Imali smo najbržu postavu kad je ona bila u boksu, a nismo ni
+            dirali bolid&ldquo;, priznaje jedan anonimni član garaže. S timskog radija
+            stiže samo: &bdquo;Netko napokon ugasite taj kanal, previše je tiho otkad
+            znamo da odlazi.&ldquo; A iz jedne suparničke momčadi — možda i najiskrenija
+            čestitka: &bdquo;Napokon ćemo možda i mi nešto osvojiti. Ali bez nje, iskreno,
+            neće biti isto.&ldquo;
+          </p>
+
+          <p>
+            Pa ipak — ovo nije kraj sezone, nego nova startna pozicija. Valentina odlazi
+            na drugi dio grida, ali trag koji ostavlja u Kodelabu neće izblijedjeti
+            brzinom kojom guma nestaje sa staze. Ostaje u svakom kolegi kojeg je naučila da
+            vjeruje u sebe, u svakom projektu koji je završio bolje nego što se činilo
+            moguće i u onoj tišini u garaži koja će još dugo zvučati kao da netko mirno
+            govori: <em>možeš ti to.</em>
+          </p>
+
+          <!-- TOPLA PORUKA -->
+          <div class="wish-box wish-box--f1">
+            <p>
+              Draga <strong>Valentina</strong>, Kodelab zna da je imao sreću što si uopće
+              prošla kroz njegov boks — i dugo će pamtiti da je, dok si bila tu, sve nekako
+              išlo malo lakše. Hvala ti na svakom &bdquo;možeš ti to&ldquo;. Sad je red da
+              netko to kaže tebi. <strong>Sretno na novoj startnoj poziciji — vidimo se na
+              stazi!</strong> 🏁
+            </p>
+          </div>
+
+          <div class="tags-row">
+            <span class="tag">#TransferGodine</span>
+            <span class="tag">#ValentinaViskov</span>
+            <span class="tag">#IVSliga</span>
+            <span class="tag">#MoralMomčadi</span>
+            <span class="tag">#ČarolijaUBoksu</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- ========== INLINE REKLAMA (GLJIVICE) ========== -->
+      <aside class="ad ad--banner ad--fungi" data-ad aria-label="Oglas">
+        <span class="ad__flag">OGLAS</span>
+        <div class="ad__inner">
+          <div class="ad__emoji">🦶🍄⚠️</div>
+          <div class="ad__text">
+            <h3>GLJIVICE GA MRZE!</h3>
+            <p>Mehaničar iz boksa otkrio jednu jednostavnu metodu koju liječnici skrivaju.</p>
+            <button class="ad__cta" data-ad-cta>SAZNAJ TAJNU</button>
+          </div>
+        </div>
+        <span class="ad__disclaimer">Rezultati nisu stvarni jer nije stvaran ni proizvod.</span>
+      </aside>
+
+      <!-- ========== POVEZANE VIJESTI IZ PADDOCKA ========== -->
+      <section class="related" aria-label="Povezane vijesti iz paddocka">
+        <h2 class="section-title">Povezane vijesti iz paddocka</h2>
+        <div class="related__grid" id="relatedGrid">
+          <!-- Kartice generira script.js iz window.SPICA_DATA -->
+        </div>
+      </section>
+
+      <!-- ========== KOMENTARI ========== -->
+      <section class="comments" aria-label="Komentari">
+        <h2 class="section-title">Komentari <span class="comments__count">(23)</span></h2>
+
+        <div class="comment-box">
+          <textarea class="comment-box__input" placeholder="Napiši komentar (samo za ukras, ništa se ne šalje)…" aria-label="Napiši komentar"></textarea>
+          <button class="comment-box__submit" data-fake-submit>Objavi komentar</button>
+        </div>
+
+        <ul class="comment-list" id="commentList">
+          <!-- Komentari se ubacuju iz script.js -->
+        </ul>
+      </section>
+
+    </main>
+
+    <!-- ========== SIDEBAR ========== -->
+    <aside class="sidebar" aria-label="Bočni stupac">
+
+      <!-- Najčitanije -->
+      <div class="widget widget--most-read">
+        <h3 class="widget__title">🔥 Najčitanije</h3>
+        <ol class="most-read" id="mostRead">
+          <!-- popunjava script.js -->
+        </ol>
+      </div>
+
+      <!-- Reklama gljivice (sidebar) -->
+      <aside class="ad ad--box ad--fungi-2" data-ad aria-label="Oglas">
+        <span class="ad__flag">OGLAS</span>
+        <div class="ad__box-emoji">🍄🚫</div>
+        <h4>Imate gljivice?</h4>
+        <p>Nemojte izlaziti na stazu prije nego što pročitate ovo!</p>
+        <button class="ad__cta ad__cta--green" data-ad-cta>POGLEDAJ PRIJE NEGO UKLONE</button>
+        <span class="ad__disclaimer">Rezultati nisu stvarni jer nije stvaran ni proizvod.</span>
+      </aside>
+
+      <!-- Anketa -->
+      <div class="widget widget--poll">
+        <h3 class="widget__title">📊 Anketa dana</h3>
+        <p class="poll__q">Kako Kodelab da nadomjesti Valentinin odlazak?</p>
+        <div class="poll" id="poll">
+          <button class="poll__opt" data-poll="Nikako">Nikako — to se ne reproducira</button>
+          <button class="poll__opt" data-poll="Inženjeri">Tri inženjera i puno kave</button>
+          <button class="poll__opt" data-poll="Bolid">Novi bolid i jači motor</button>
+        </div>
+      </div>
+
+      <!-- Reklama gljivice (sidebar 2) -->
+      <aside class="ad ad--box ad--fungi-3" data-ad aria-label="Oglas">
+        <span class="ad__flag">OGLAS</span>
+        <div class="ad__box-emoji">💅🍄</div>
+        <h4>Dermatolozi bijesni!</h4>
+        <p>Ova jedna runda u boksu uklanja 99% gljivica.</p>
+        <button class="ad__cta ad__cta--yellow" data-ad-cta>SAZNAJ TAJNU</button>
+        <span class="ad__disclaimer">Rezultati nisu stvarni jer nije stvaran ni proizvod.</span>
+      </aside>
+
+      <!-- Male povezane kartice -->
+      <div class="widget widget--mini">
+        <h3 class="widget__title">📰 Iz istog boksa</h3>
+        <div class="mini-cards" id="miniCards">
+          <!-- popunjava script.js -->
+        </div>
+      </div>
+
+    </aside>
+  </div>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__logo">ŠPICA<span>.hr</span> <span class="logo__parody">PARODIJA</span></div>
+      <p class="site-footer__disclaimer">
+        <strong>Humoristična parodija — sve izjave, komentari i reklame potpuno su izmišljeni.</strong>
+      </p>
+      <p class="site-footer__small">
+        Ovaj portal ne postoji, proizvodi ne postoje, a jedina stvarna stvar ovdje je
+        zahvalnost kolegici na svemu što je ostavila za sobom u garaži.
+      </p>
+      <p class="site-footer__copy">© <span id="year"></span> ŠPICA.hr — izmišljeno s ljubavlju 🏁</p>
+    </div>
+  </footer>
+
+  <!-- ===================== MODAL (dummy članci) ===================== -->
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal__backdrop" data-modal-close></div>
+    <div class="modal__dialog" role="document">
+      <button class="modal__close" data-modal-close aria-label="Zatvori">&times;</button>
+      <div class="modal__flag">EKSKLUZIVNO</div>
+      <h2 class="modal__title" id="modalTitle">Naslov</h2>
+      <div class="modal__emoji">🏎️</div>
+      <p class="modal__msg">
+        Ova vijest iz paddocka još nije službeno potvrđena — naš reporter trenutno je zaglavio u pit laneu.
+      </p>
+      <button class="modal__ok" data-modal-close>U redu, pričekat ću</button>
+    </div>
+  </div>
+
+  <!-- ===================== POPUP REKLAMA (gljivice) ===================== -->
+  <div class="popup" id="popupAd" role="dialog" aria-modal="true" aria-labelledby="popupTitle" hidden>
+    <div class="popup__backdrop" data-popup-close></div>
+    <div class="popup__dialog">
+      <button class="popup__x" data-popup-close aria-label="Zatvori oglas">&times;</button>
+      <span class="ad__flag ad__flag--big">OGLAS</span>
+      <div class="popup__emoji">🦶🍄🔥</div>
+      <h2 class="popup__title" id="popupTitle">Liječnici ostali bez riječi!</h2>
+      <p class="popup__text">
+        Njegovi nokti nakon samo <strong>jednog pit stopa</strong>… nećete vjerovati što se dogodilo.
+        Šokantno otkriće: gljivice ne preživljavaju tehničku kontrolu!
+      </p>
+      <button class="popup__cta" data-ad-cta>POGLEDAJ PRIJE NEGO UKLONE</button>
+      <button class="popup__decline" data-popup-close>Ne, želim zadržati svoje gljivice</button>
+      <span class="ad__disclaimer ad__disclaimer--center">Rezultati nisu stvarni jer nije stvaran ni proizvod.</span>
+    </div>
+  </div>
+
+  <!-- ===================== TOAST (obavijesti) ===================== -->
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <!-- ===================== POVRATAK NA VRH ===================== -->
+  <button class="to-top" id="toTop" aria-label="Povratak na vrh" hidden>↑</button>
+
+  <!-- ===================== PODACI OVE STRANICE ===================== -->
+  <script>
+    window.SPICA_DATA = {
+      modalMsg: "Ova vijest iz paddocka još nije službeno potvrđena — naš reporter trenutno je zaglavio u pit laneu.",
+      related: [
+        { flag: "SVADBA GODINE", href: "index.html", img: "images/mladenci.jpg",
+          title: "BOG JAVE IZGOVORIO JE SUDBONOSNO „DA“! Kolege u šoku zbog ozbiljnog commitmenta" },
+        { flag: "MISTERIJ", href: "ljubo.html", ico: "🏖️", grad: "linear-gradient(135deg,#2193b0,#6dd5ed)",
+          title: "DOSAD NEVIĐENO: Ljubo tri tjedna nije bio u uredu, a nije u pitanju ozlijeđeni ekstremitet" },
+        { flag: "ŠOK", href: "roso.html", ico: "🍽️", grad: "linear-gradient(135deg,#c31432,#240b36)",
+          title: "ŠOK U KODELABU: Roso cijeli tjedan nije jeo jetrica u uredu" },
+        { flag: "PADDOCK", ico: "☕", grad: "linear-gradient(135deg,#403a3e,#be5869)",
+          title: "Automat za kavu u Kodelabu prijavljen kao kritična infrastruktura momčadi" },
+        { flag: "TRAČ", ico: "🏁", grad: "linear-gradient(135deg,#e2001a,#ff7a00)",
+          title: "Tko će naslijediti najbolju liniju u zavoju? Grid bruji danima" },
+        { flag: "UPRAVO", ico: "🌱", grad: "linear-gradient(135deg,#11998e,#38ef7d)",
+          title: "Garaža službeno prešla na reciklirane gume za osjećaje" }
+      ],
+      mostRead: [
+        "Kako prepoznati da je kolega spreman za produkciju — Valentinin vodič u 5 koraka",
+        "Zašto inženjeri nikako ne mogu reproducirati dobar moral momčadi",
+        "Timski radio otkriva: najtiši glas u garaži bio je ujedno i najbrži",
+        "Ugljični otisak paddocka: prije i poslije Valentine",
+        "Suparnici progovorili: „Protiv nje smo se natjecali, njoj smo navijali“"
+      ],
+      mini: [
+        { ico: "🏁", href: "#top", title: "Osvajačica IVS lige odvozila najbolji krug — daleko od reflektora" },
+        { ico: "📻", title: "Timski radio preopterećen porukama podrške" },
+        { ico: "🌱", title: "Ugljični otisak paddocka od danas pristojniji" },
+        { ico: "🤝", title: "Suparničke momčadi privremeno zaboravile rivalstvo" }
+      ],
+      comments: [
+        { user: "BoksInzenjer",            time: "prije 8 min",  likes: 421, color: "#e2001a", html: "Zamjenski bolid pronašli smo za 20 minuta. Za zamjenski osmijeh u garaži — i dalje tražimo." },
+        { user: "TimskiRadio",             time: "prije 15 min", likes: 388, color: "#111827", html: "Molim vas ugasite mi mikrofon, previše je tiho otkad znamo da odlazi." },
+        { user: "SuparnikIzDrugogBoksa",   time: "prije 22 min", likes: 512, color: "#0083b0", html: "Natjecali smo se protiv nje godinama. Danas prvi put navijam da joj nova sezona bude najbolja." },
+        { user: "JuniorKojiJeSadSenior",   time: "prije 30 min", likes: 905, color: "#16a34a", html: "Ušao sam u firmu uvjeren da ću se zabiti u prvom zavoju. Izašao s najboljim krugom karijere. Hvala, V. ❤️" },
+        { user: "EkoReferentica",          time: "prije 41 min", likes: 276, color: "#11998e", html: "Otkad je ona tu, čak i kante za otpad znaju razliku između plastike i papira." },
+        { user: "Kuhinja_Kodelab",         time: "prije 1 h",    likes: 198, color: "#ff7a00", html: "Nudimo joj doživotni rezervirani stol. I da, znamo točno kako voli čaj — nikad kavu." },
+        { user: "AnonimniPitStop",         time: "prije 1 h",    likes: 644, color: "#be5869", html: "Najbrži pit stop u povijesti momčadi bio je kad bi ona rekla <code>možeš ti to</code>." }
+      ]
+    };
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

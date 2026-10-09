@@ -8,9 +8,21 @@
   /* -------------------------------------------------------------------------
      PODACI: povezani članci, komentari, najčitanije, mini kartice
      (Slobodno mijenjaj tekstove i ubacuj interne fore.)
+
+     Svaka stranica može prije učitavanja ove skripte definirati
+     `window.SPICA_DATA = { related, mostRead, mini, comments, modalMsg }`
+     kako bi postavila vlastiti sadržaj. Ako ništa nije definirano,
+     koriste se zadani (svadbeni) podaci ispod.
+
+     Kartica u `related` / `mini` smije imati:
+       - `href`  -> kartica postaje prava poveznica na drugi članak
+       - `img`   -> prikazuje pravu sličicu umjesto emoji gradijenta
      ------------------------------------------------------------------------- */
 
-  var RELATED = [
+  var D = (typeof window !== "undefined" && window.SPICA_DATA) || {};
+
+  var RELATED = D.related || [
+    { flag: "TRANSFER GODINE", href: "valentina.html", img: "images/valentina.png", title: "TRANSFER GODINE: Valentina Viskov napušta Kodelab, cijela garaža ustala s boksa" },
     { flag: "EKSKLUZIVNO", ico: "🎬", grad: "linear-gradient(135deg,#e2001a,#ff7a00)", title: "Keanu Reeves viđen kako odobrava pull request bez ijednog komentara" },
     { flag: "ŠOK", ico: "😱", grad: "linear-gradient(135deg,#7b2ff7,#f107a3)", title: "ŠOK U HOLLYWOODU: Ryan Gosling priznao da ne zna centrirati div bez Flexboxa" },
     { flag: "SHOWBUZZ", ico: "💃", grad: "linear-gradient(135deg,#00b4db,#0083b0)", title: "Jennifer Lopez otkrila tajnu mladolikosti: „Nikad ne deployam petkom“" },
@@ -25,7 +37,7 @@
     { flag: "UPRAVO", ico: "🎂", grad: "linear-gradient(135deg,#403a3e,#be5869)", title: "Pogledajte reakciju uzvanika kada su shvatili da torta nema dark mode" }
   ];
 
-  var MOST_READ = [
+  var MOST_READ = D.mostRead || [
     "Bog Jave prešao na stabilnu paralelnu obradu — evo što to znači za vas",
     "10 znakova da je vaša veza spremna za produkciju (broj 7 će vas iznenaditi)",
     "Kumovi otkrili: ovako izgleda savršen approval na pull requestu",
@@ -33,14 +45,14 @@
     "Torta bez dark modea podijelila naciju"
   ];
 
-  var MINI = [
+  var MINI = D.mini || [
     { ico: "🔒", title: "Mladenka dobila trajni admin pristup — bez 2FA" },
     { ico: "📉", title: "SLA braka premašio 99,99% već prvi dan" },
     { ico: "🤝", title: "Uzvanici jednoglasno odobrili merge" },
     { ico: "🐛", title: "Ceremonija prošla bez ijednog kritičnog buga" }
   ];
 
-  var COMMENTS = [
+  var COMMENTS = D.comments || [
     { user: "JavaFan1987",     time: "prije 12 min", likes: 342, color: "#e2001a", html: "Čestitam! Samo me zanima je li brak pisan u Springu ili su išli na nešto stabilnije?" },
     { user: "AnonimniKolega",  time: "prije 18 min", likes: 210, color: "#7b2ff7", html: "Mogu potvrditi, ceremonija je prošla bez rollbacka. Bio sam na produkciji." },
     { user: "TetkaIzNjemačke", time: "prije 24 min", likes: 501, color: "#0083b0", html: "Predivni ste, samo nemojte sad predugo čekati na junior developera ❤️" },
@@ -54,7 +66,7 @@
   ];
 
   /* Poruke za modal (dummy članci) */
-  var MODAL_MSG = "Ova ekskluziva još nije potvrđena jer je naš novinar trenutno na švedskom stolu.";
+  var MODAL_MSG = D.modalMsg || "Ova ekskluziva još nije potvrđena jer je naš novinar trenutno na švedskom stolu.";
 
   /* -------------------------------------------------------------------------
      Pomoćne funkcije
@@ -92,12 +104,14 @@
      ------------------------------------------------------------------------- */
   var modal = document.getElementById("modal");
   var modalTitle = document.getElementById("modalTitle");
+  var modalMsg = modal ? modal.querySelector(".modal__msg") : null;
   var lastFocused = null;
 
   function openModal(title) {
     if (!modal) return;
     lastFocused = document.activeElement;
     if (modalTitle) modalTitle.textContent = title || "Ekskluziva";
+    if (modalMsg) modalMsg.textContent = MODAL_MSG;
     modal.hidden = false;
     var closeBtn = modal.querySelector(".modal__close");
     if (closeBtn) closeBtn.focus();
@@ -178,16 +192,24 @@
   var grid = document.getElementById("relatedGrid");
   if (grid) {
     RELATED.forEach(function (r) {
-      var card = el("button", "rel-card");
-      card.type = "button";
-      card.setAttribute("data-modal", r.title);
+      var isLink = !!r.href;
+      var card = el(isLink ? "a" : "button", "rel-card");
+      if (isLink) {
+        card.href = r.href;
+      } else {
+        card.type = "button";
+        card.setAttribute("data-modal", r.title);
+      }
+      var thumb = r.img
+        ? '<div class="rel-card__thumb rel-card__thumb--img"><img src="' + r.img + '" alt="" loading="lazy"></div>'
+        : '<div class="rel-card__thumb" style="background:' + r.grad + '" aria-hidden="true">' + r.ico + "</div>";
       card.innerHTML =
-        '<div class="rel-card__thumb" style="background:' + r.grad + '" aria-hidden="true">' + r.ico + "</div>" +
+        thumb +
         '<div class="rel-card__body">' +
           '<span class="rel-card__flag">' + r.flag + "</span>" +
           '<span class="rel-card__title">' + r.title + "</span>" +
         "</div>";
-      card.addEventListener("click", function () { openModal(r.title); });
+      if (!isLink) card.addEventListener("click", function () { openModal(r.title); });
       grid.appendChild(card);
     });
   }
@@ -215,12 +237,13 @@
   var miniCards = document.getElementById("miniCards");
   if (miniCards) {
     MINI.forEach(function (m) {
-      var b = el("button", "mini-card");
-      b.type = "button";
+      var isLink = !!m.href;
+      var b = el(isLink ? "a" : "button", "mini-card");
+      if (isLink) { b.href = m.href; } else { b.type = "button"; }
       b.innerHTML =
         '<span class="mini-card__ico" aria-hidden="true">' + m.ico + "</span>" +
         '<span class="mini-card__t">' + m.title + "</span>";
-      b.addEventListener("click", function () { openModal(m.title); });
+      if (!isLink) b.addEventListener("click", function () { openModal(m.title); });
       miniCards.appendChild(b);
     });
   }
